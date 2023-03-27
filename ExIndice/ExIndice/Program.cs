@@ -15,6 +15,6 @@ internal class Program
             k = k + 1;
             soma = soma + k;
         }
-        Console.WriteLine(soma);
+        Console.WriteLine($"Soma = {soma}");
     }
 }
