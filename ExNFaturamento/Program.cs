@@ -7,11 +7,18 @@ internal partial class Program
     {
         Console.Write("Quantidade de dias: ");
         int n = Convert.ToInt32(Console.ReadLine());
-
-        List<Faturamento> list = new List<Faturamento>();
-
-        for (int i = 1; i <= n; i++)
+        if (n <= 0)
         {
+            Console.WriteLine($"Não é possível realizar a operação!");
+            
+        }
+        else
+        {
+            
+            List<Faturamento> list = new List<Faturamento>();
+
+            for (int i = 1; i <= n; i++)
+            {
             System.Console.WriteLine($"Dia {i}:");
             int dia = 0;
             dia += i;
@@ -19,11 +26,12 @@ internal partial class Program
             double faturadoDia = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
             list.Add(new Faturamento(dia, faturadoDia));
             System.Console.WriteLine();
-        }
-        System.Console.WriteLine("Faturado: ");
-        foreach (Faturamento item in list)
-        {
+            }
+            System.Console.WriteLine("Faturado: ");
+            foreach (Faturamento item in list)
+            {
             System.Console.WriteLine(item);
+            }
         }
     }
 }

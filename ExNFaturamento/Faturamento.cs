@@ -17,8 +17,8 @@ namespace ExNFaturamento
             FaturadoDia = faturadoDia;
         }
         public override string ToString() {
-            return Dia
-                + ", "
+            return "Dia "+ Dia
+                + ", R$"
                 + FaturadoDia.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
