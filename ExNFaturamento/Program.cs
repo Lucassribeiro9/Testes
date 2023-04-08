@@ -32,7 +32,12 @@ internal partial class Program
             {
             System.Console.WriteLine(item);
             }
-            
+            var mDia = list.OrderBy(x => x.faturadoDia);
+            foreach (Faturamento obj in mDia)
+            {
+                Console.WriteLine(obj);
+                
+            }
         }
     }
 }
