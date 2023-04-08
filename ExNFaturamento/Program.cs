@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using ExNFaturamento;
 
 internal partial class Program
@@ -32,12 +33,9 @@ internal partial class Program
             {
             System.Console.WriteLine(item);
             }
-            var mDia = list.OrderBy(x => x.faturadoDia);
-            foreach (Faturamento obj in mDia)
-            {
-                Console.WriteLine(obj);
-                
-            }
+            // dia com maior faturamento
+
+            // média de faturamento
         }
     }
 }
