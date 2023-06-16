@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CarrosEx
 {
-    public class CarroDiesel
+    public class CarroDiesel : Carro
     {
         public int CapacidadeCarga { get; set; }
         public int VolumeCacamba { get; set; }
