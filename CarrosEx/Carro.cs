@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace CarrosEx
 {
-    public class Carro
+    public abstract class Carro
     {
-        
+        public int NumChassi { get; set; }
+        public int NumMotor { get; set; }
     }
 }
