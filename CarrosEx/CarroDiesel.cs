@@ -9,5 +9,13 @@ namespace CarrosEx
     {
         public decimal CapacidadeCarga { get; set; }
         public decimal VolumeCacamba { get; set; }
+
+        public override decimal CalcularCustoVenda()
+        {
+            decimal imposto = CustoProducao * 0.3m;
+            decimal lucro = CustoProducao * 0.25m;
+            return CustoProducao + imposto + lucro;
+        }
     }
+
 }

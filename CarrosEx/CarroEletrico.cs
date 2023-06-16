@@ -9,5 +9,12 @@ namespace CarrosEx
     {
         public decimal Potencia { get; set; }
         public decimal DuracaoBateria { get; set; }
+
+        public override decimal CalcularCustoVenda()
+        {
+            decimal imposto = CustoProducao * 0.1m;
+            decimal lucro = CustoProducao * 0.25m;
+            return CustoProducao - imposto + lucro;
+        }
     }
 }
