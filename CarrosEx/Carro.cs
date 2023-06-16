@@ -10,5 +10,12 @@ namespace CarrosEx
         public string NumChassi { get; set; }
         public string NumMotor { get; set; }
         public decimal CustoProducao { get; set; }
+
+        public virtual decimal CalcularCustoVenda()
+        {
+            decimal imposto = CustoProducao * 0.2m;
+            decimal lucro = CustoProducao * 0.25m;
+            return CustoProducao + imposto + lucro;
+        }
     }
 }
