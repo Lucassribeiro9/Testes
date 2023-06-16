@@ -7,7 +7,8 @@ namespace CarrosEx
 {
     public abstract class Carro
     {
-        public int NumChassi { get; set; }
-        public int NumMotor { get; set; }
+        public string NumChassi { get; set; }
+        public string NumMotor { get; set; }
+        public decimal CustoProducao { get; set; }
     }
 }
