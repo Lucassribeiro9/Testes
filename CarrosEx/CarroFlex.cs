@@ -8,6 +8,6 @@ namespace CarrosEx
     public class CarroFlex : Carro
     {
         public int NumPortas { get; set; }
-        public int NumCilindradas { get; set; }
+        public decimal NumCilindradas { get; set; }
     }
 }

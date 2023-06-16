@@ -7,7 +7,7 @@ namespace CarrosEx
 {
     public class CarroDiesel : Carro
     {
-        public int CapacidadeCarga { get; set; }
-        public int VolumeCacamba { get; set; }
+        public decimal CapacidadeCarga { get; set; }
+        public decimal VolumeCacamba { get; set; }
     }
 }

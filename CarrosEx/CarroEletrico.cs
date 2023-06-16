@@ -7,7 +7,7 @@ namespace CarrosEx
 {
     public class CarroEletrico : Carro
     {
-        public int Potencia { get; set; }
-        public int DuracaoBateria { get; set; }
+        public decimal Potencia { get; set; }
+        public decimal DuracaoBateria { get; set; }
     }
 }
