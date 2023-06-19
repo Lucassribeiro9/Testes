@@ -17,13 +17,41 @@ string tipoCarro = Console.ReadLine();
 switch (tipoCarro)
 {
     case "Flex":
-        Carro carro = new CarroFlex(motor, chassi, custoProducao);
+        Console.Write($"Digite o número de portas: ");
+        int numPortas = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Digite o número de cilindradas: ");
+        decimal numCilindradas = Convert.ToDecimal(Console.ReadLine());
+        CarroFlex carro = new CarroFlex(chassi, motor, custoProducao, numPortas, numCilindradas);
+        Console.WriteLine($"Valor obtido: {carro.CalcularCustoVenda()}");
         break;
+
     case "Diesel":
-        Carro carro = new CarroDiesel(motor, chassi, custoProducao);
+        Console.Write($"Capacidade de carga: ");
+        decimal capacidadeCarga = Convert.ToDecimal(Console.ReadLine());
+        Console.Write($"Volume de cacamba: ");
+        decimal volumeCacamba = Convert.ToDecimal(Console.ReadLine());
+        CarroDiesel carroDiesel = new CarroDiesel(
+            chassi,
+            motor,
+            custoProducao,
+            capacidadeCarga,
+            volumeCacamba
+        );
+        Console.WriteLine($"Valor obtido: {carroDiesel.CalcularCustoVenda()}");
         break;
     case "Elétrico":
-        Carro carro = new CarroEletrico(motor, chassi, custoProducao);
+        Console.Write($"Potência: ");
+        decimal potencia = Convert.ToDecimal(Console.ReadLine());
+        Console.Write($"Duração da bateria: ");
+        decimal duracaoBateria = Convert.ToDecimal(Console.ReadLine());
+        CarroEletrico carroEletrico = new CarroEletrico(
+            chassi,
+            motor,
+            custoProducao,
+            potencia,
+            duracaoBateria
+        );
+        Console.WriteLine($"Valor obtido: {carroEletrico.CalcularCustoVenda()}");
         break;
     default:
         Console.WriteLine($"Texto inválido");
