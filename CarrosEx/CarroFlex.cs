@@ -9,7 +9,12 @@ namespace CarrosEx
     {
         public int NumPortas { get; set; }
         public decimal NumCilindradas { get; set; }
-
+    
+    public CarroFlex(string numChassi, string numMotor, decimal custoProducao, int numPortas, decimal numCilindradas) : base(numChassi, numMotor, custoProducao)   
+    {
+        NumPortas = numPortas;
+        NumCilindradas = numCilindradas;
+    }
         public override decimal CalcularCustoVenda()
         {
             decimal imposto = CustoProducao * 0.2m;

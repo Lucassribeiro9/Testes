@@ -10,6 +10,11 @@ namespace CarrosEx
         public decimal CapacidadeCarga { get; set; }
         public decimal VolumeCacamba { get; set; }
 
+        public CarroDiesel(string numChassi, string numMotor, decimal custoProducao, decimal capacidadeCarga, decimal volumeCacamba) : base(numChassi, numMotor, custoProducao)
+        {
+            CapacidadeCarga = capacidadeCarga;
+            VolumeCacamba = volumeCacamba;
+        }
         public override decimal CalcularCustoVenda()
         {
             decimal imposto = CustoProducao * 0.3m;
