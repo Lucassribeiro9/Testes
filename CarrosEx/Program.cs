@@ -14,3 +14,18 @@ decimal custoProducao = Convert.ToDecimal(Console.ReadLine());
 Console.Write("Qual o tipo do carro? Flex, Diesel ou Elétrico? ");
 string tipoCarro = Console.ReadLine();
 
+switch (tipoCarro)
+{
+    case "Flex":
+        Carro carro = new CarroFlex(motor, chassi, custoProducao);
+        break;
+    case "Diesel":
+        Carro carro = new CarroDiesel(motor, chassi, custoProducao);
+        break;
+    case "Elétrico":
+        Carro carro = new CarroEletrico(motor, chassi, custoProducao);
+        break;
+    default:
+        Console.WriteLine($"Texto inválido");
+        break;
+}
