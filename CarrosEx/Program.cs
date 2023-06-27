@@ -136,6 +136,7 @@ while (continuar)
     if (resposta.ToUpper() != "S")
     {
         continuar = false;
+        Console.WriteLine("Encerrando...");
     }
 }
 
