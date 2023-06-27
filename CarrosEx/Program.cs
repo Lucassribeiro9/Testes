@@ -54,14 +54,14 @@ while (continuar)
         }
     }
 
-    string tipoCarro = "";
-    while (tipoCarro != "Flex" && tipoCarro != "Diesel" && tipoCarro != "Elétrico")
+    int tipoCarro = 0;
+    while (tipoCarro != 1 && tipoCarro != 2 && tipoCarro != 3)
     {
-        Console.Write("Qual o tipo do carro? Flex, Diesel ou Elétrico? ");
-        tipoCarro = Console.ReadLine();
+        Console.Write("Qual o tipo do carro? [1]Flex,[2]Diesel ou [3]Elétrico? ");
+        tipoCarro = Convert.ToInt32(Console.ReadLine());
         switch (tipoCarro)
         {
-            case "Flex":
+            case 1:
                 int numPortas = 0;
                 while (numPortas == 0)
                 {
@@ -72,6 +72,7 @@ while (continuar)
                     {
                         Console.WriteLine("Erro: Entrada inválida. Digite um número inteiro válido.");
                     }
+
                 }
                 decimal numCilindradas = 0;
                 entradaValida = false;
@@ -96,7 +97,7 @@ while (continuar)
                 Console.WriteLine($"Valor obtido: R${carro.CalcularCustoVenda()}");
                 break;
 
-            case "Diesel":
+            case 2:
                 Console.Write($"Capacidade de carga: ");
                 decimal capacidadeCarga = Convert.ToDecimal(Console.ReadLine());
                 Console.Write($"Volume de cacamba: ");
@@ -110,7 +111,7 @@ while (continuar)
                 );
                 Console.WriteLine($"Valor obtido: R${carroDiesel.CalcularCustoVenda()}");
                 break;
-            case "Elétrico":
+            case 3:
                 Console.Write($"Potência: ");
                 decimal potencia = Convert.ToDecimal(Console.ReadLine());
                 Console.Write($"Duração da bateria: ");
