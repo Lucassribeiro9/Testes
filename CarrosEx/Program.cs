@@ -108,7 +108,7 @@ while (continuar)
                     capacidadeCarga,
                     volumeCacamba
                 );
-                Console.WriteLine($"Valor obtido: R${carro.CalcularCustoVenda()}");
+                Console.WriteLine($"Valor obtido: R${carroDiesel.CalcularCustoVenda()}");
                 break;
             case "Elétrico":
                 Console.Write($"Potência: ");
@@ -122,7 +122,7 @@ while (continuar)
                     potencia,
                     duracaoBateria
                 );
-                Console.WriteLine($"Valor obtido: R${carro.CalcularCustoVenda()}");
+                Console.WriteLine($"Valor obtido: R${carroEletrico.CalcularCustoVenda()}");
                 break;
             default:
                 Console.WriteLine($"Texto inválido");
