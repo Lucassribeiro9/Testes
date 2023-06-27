@@ -37,7 +37,7 @@ while (continuar)
     bool entradaValida = false;
     while (!entradaValida)
     {
-        Console.Write("Digite o custo da produção: ");
+        Console.Write("Digite o custo da produção: R$");
 
         try
         {
@@ -66,13 +66,34 @@ while (continuar)
                 while (numPortas == 0)
                 {
                     Console.Write($"Digite o número de portas: ");
-                    int numPortas = Convert.ToInt32(Console.ReadLine());
+                    string input = Console.ReadLine();
 
+                    if (!Int32.TryParse(input, out numPortas))
+                    {
+                        Console.WriteLine("Erro: Entrada inválida. Digite um número inteiro válido.");
+                    }
                 }
-                Console.Write($"Digite o número de cilindradas: ");
-                decimal numCilindradas = Convert.ToDecimal(Console.ReadLine());
+                decimal numCilindradas = 0;
+                entradaValida = false;
+                while (!entradaValida)
+                {
+                    Console.Write($"Digite o número de cilindradas: ");
+                    try
+                    {
+                        numCilindradas = Convert.ToDecimal(Console.ReadLine());
+                        entradaValida = true;
+                    }
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine("Erro: Entrada inválida. Digite um número válido.");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"Erro: {e.Message}");
+                    }
+                }
                 CarroFlex carro = new CarroFlex(chassi, motor, custoProducao, numPortas, numCilindradas);
-                Console.WriteLine($"Valor obtido: {carro.CalcularCustoVenda()}");
+                Console.WriteLine($"Valor obtido: R${carro.CalcularCustoVenda()}");
                 break;
 
             case "Diesel":
@@ -87,7 +108,7 @@ while (continuar)
                     capacidadeCarga,
                     volumeCacamba
                 );
-                Console.WriteLine($"Valor obtido: {carroDiesel.CalcularCustoVenda()}");
+                Console.WriteLine($"Valor obtido: R${carro.CalcularCustoVenda()}");
                 break;
             case "Elétrico":
                 Console.Write($"Potência: ");
@@ -101,7 +122,7 @@ while (continuar)
                     potencia,
                     duracaoBateria
                 );
-                Console.WriteLine($"Valor obtido: {carroEletrico.CalcularCustoVenda()}");
+                Console.WriteLine($"Valor obtido: R${carro.CalcularCustoVenda()}");
                 break;
             default:
                 Console.WriteLine($"Texto inválido");
