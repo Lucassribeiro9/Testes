@@ -7,7 +7,7 @@ O projeto atualmente possui a seguinte funcionalidade:
 * Calcular o preço de venda de um carro, tendo em mente seu modelo como atributo. Ele é separado nas categorias: Flex, Elétrico e a Diesel.
 
 ## Funcionalidades futuras:
-
+* Adicionar interface gráfica
 * Adicionar um novo carro
 * Editar um carro existente
 * Excluir um carro
