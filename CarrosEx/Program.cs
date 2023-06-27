@@ -46,7 +46,7 @@ while (continuar)
         }
         catch (FormatException e)
         {
-            Console.WriteLine("Erro: Entrada inválida. Digite um número válido.");
+            Console.WriteLine($"Erro: Entrada inválida. Digite um número válido. {e.Message}");
         }
         catch (Exception e)
         {
@@ -71,6 +71,10 @@ while (continuar)
                     if (!Int32.TryParse(input, out numPortas))
                     {
                         Console.WriteLine("Erro: Entrada inválida. Digite um número inteiro válido.");
+                    }
+                    if (numPortas == 0)
+                    {
+                        Console.WriteLine("Erro: Campo obrigatório. Digite o número de portas novamente.");
                     }
 
                 }
