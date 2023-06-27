@@ -125,7 +125,7 @@ while (continuar)
                 Console.WriteLine($"Valor obtido: R${carroEletrico.CalcularCustoVenda()}");
                 break;
             default:
-                Console.WriteLine($"Texto inválido");
+                Console.WriteLine($"Texto inválido. Digite um texto válido.");
                 break;
         }
     }
