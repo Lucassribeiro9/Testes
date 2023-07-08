@@ -1,4 +1,9 @@
+using CarrosEx.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<CarrosDbContext>(options =>
+    options.UseSqlServer(Configuration.GetConnectionString("CarrosMVCdb") ?? throw new InvalidOperationException("Connection string 'CarrosMVCdb' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
