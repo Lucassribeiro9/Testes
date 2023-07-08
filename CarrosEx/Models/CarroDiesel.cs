@@ -2,24 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CarrosEx.Services;
 
 namespace CarrosEx
 {
     public class CarroDiesel : Carro
     {
+        private readonly CalcularImpostoService _calcularImpostoService;
+
         public decimal CapacidadeCarga { get; set; }
         public decimal VolumeCacamba { get; set; }
 
-        public CarroDiesel(string numChassi, string numMotor, decimal custoProducao, decimal capacidadeCarga, decimal volumeCacamba) : base(numChassi, numMotor, custoProducao)
+        public CarroDiesel(string numChassi, string numMotor, decimal custoProducao, decimal capacidadeCarga, decimal volumeCacamba, CalcularImpostoService calcularImpostoService) : base(numChassi, numMotor, custoProducao, calcularImpostoService)
         {
             CapacidadeCarga = capacidadeCarga;
             VolumeCacamba = volumeCacamba;
+            _calcularImpostoService = calcularImpostoService;
         }
         public override decimal CalcularCustoVenda()
         {
-            decimal imposto = CustoProducao * 0.3m;
-            decimal lucro = CustoProducao * 0.25m;
-            return CustoProducao + imposto + lucro;
+            return _calcularImpostoService.CalcularCustoVendaCarroDiesel(CustoProducao);
         }
     }
 
