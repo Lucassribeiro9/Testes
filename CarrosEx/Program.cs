@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CarrosEx;
+using CarrosEx.Data;
 
 bool continuar = true;
 while (continuar)
@@ -90,7 +86,7 @@ while (continuar)
                     }
                     catch (FormatException e)
                     {
-                        Console.WriteLine("Erro: Entrada inválida. Digite um número válido." + e.Message);
+                        Console.WriteLine("Erro: Entrada inválida. Digite um número válido.");
                     }
                     catch (Exception e)
                     {
