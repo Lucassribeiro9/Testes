@@ -90,7 +90,7 @@ while (continuar)
                     }
                     catch (FormatException e)
                     {
-                        Console.WriteLine("Erro: Entrada inválida. Digite um número válido.");
+                        Console.WriteLine("Erro: Entrada inválida. Digite um número válido." + e.Message);
                     }
                     catch (Exception e)
                     {
