@@ -1,6 +1,6 @@
 using CarrosEx.Services;
 
-namespace CarrosEx
+namespace CarrosEx.Classes
 {
     public abstract class Carro
     {

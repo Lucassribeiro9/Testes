@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CarrosEx.Services;
 
-namespace CarrosEx
+namespace CarrosEx.Classes
 {
     public class CarroEletrico : Carro
     {
